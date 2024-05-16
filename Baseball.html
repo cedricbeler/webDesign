@@ -1,0 +1,220 @@
+<html>
+<style>
+    body {background-image: url("https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/dmpluyoq/f126037e-336e-47b5-8e08-990297f22abb.jpg");
+    
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: #FFFFFF;
+
+}
+header {
+    background-color: darkgray;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+ }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.price {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product1 {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+}
+#cartContainer {
+            margin-top: 20px;
+            background-color: darkgreen;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #cartList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cartList li {
+            margin-bottom: 10px;
+        }
+
+        #totalPrice {
+            font-weight: bold;
+        }
+
+        .removeButton {
+            background-color: red;
+        }
+
+</style>
+<head>
+    <title>Baseball Store</title>
+</head>
+<body>
+    <div>
+        <header>
+            <center><a href ="C:\Users\Cedric Beler\Desktop\Ced_ITC_HTML\ITC_CODING\MidtermExam_Balayo_Beler.html"><input type = "Submit" value = "Home Page"></a></center>
+        </header>
+    </div>
+
+    <div class="product-container">
+        <div class="product">
+            <img src="https://i.ebayimg.com/images/g/nR0AAOSwh0Ve9nb8/s-l1600.jpg" alt="Product 1">
+            <h3>ZETT hardball baseball</h3>
+            <p>A ramie bat that combines bamboo in the grip and maple in the striking part, providing both durability and a good shot feeling. Saitama Seibu Lions Mori's favorite model is the thin grip and high operability.</p>
+            <p class="price">₱4,962</p>
+            <button onclick="addToCart('ZETT hardball baseball', 4962)">Add to Cart</button>
+        </div>
+
+        <div class ="product">
+            <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4obUnf4aljKeOpuZvGVKCI0HbuPvDez-I1w&usqp=CAU" alt="Product 3">
+            <h3>Hardball</h3>
+            <p>The ball consists of a rubber or cork center wrapped in yarn and covered with white natural horsehide or cowhide, or a synthetic composite leather</p>
+            <p class="price">₱1,111</p>
+            <button onclick="addToCart('Hardball', 1111)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41bHJBx5uCL.jpg" alt="Product 2">
+            <h3>Rawlings Coolflo NOCSAE Molded Batting Helmet</h3>
+            <p>Initially worn by all Major League Baseball® athlete. Specifically constructed for the athlete desiring a helmet with an established history of excellence along with pro-inspired attributes. Rawlings Coolflo models will continue to redefine the standards of traditional helmet design.</p>
+            <p class="price">₱1,659</p>
+            <button onclick="addToCart('Rawlings Coolflo NOCSAE Molded Batting Helmet', 1659)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <div class="product-container1">
+        <div class="product1">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/51971fe1-512d-4cb5-8c2b-67c44c19de09/mercurial-vapor-15-elite-football-boot-9Mbrnv.png" alt="Product 2">
+            <h3>Nike Mercurial Vapor 15 Elite</h3>
+            <p>The pitch is yours when you lace up in the Vapor 15 Elite FG. We added a Zoom Air unit, made specifically for football, and grippy texture up top for exceptional touch, so you can dominate in the waning minutes of a match—when it matters most. Feel the explosive speed as you race around the pitch, making the critical plays with velocity and pace. Fast is in the Air.</p>
+            <p class="price">₱12,695</p>
+            <button onclick="addToCart('Nike Mercurial Vapor 15 Elite', 12695)">Add to Cart</button>
+        </div>
+
+        <div class="product-container1">
+            <div class="product1">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTzfJYzmgOBixrKB-2nilad7qPY2xctQ84buJxj8STm5HpSNqW-VR4JoRdkD_z6jYFfgZa_wkZhF6W7yv2CdVSj7T3R0jEX3tTugJvyk5yMyM551BeSkfcKFg" alt="Product 2">
+                <h3>WILSON 2023 A500 Youth Baseball Glove</h3>
+                <p>The 11.5 A500, ideal for youth ballplayers who see time at every position, features Wilsons iconic H-Web to corral the ball. The all-leather construction offers a durable and lightweight feel with Black and Blonde Top Grain leather, binding and dual welting. Engineered for youth players, the A500 boasts a Quick Fit Wrist elastic system that adjusts to hug the wrist, and finger stalls are short and narrow for a steady control of the glove.</p>
+                <p class="price">₱2,882</p>
+                <button onclick="addToCart('WILSON 2023 A500 Youth Baseball Glove', 2882)">Add to Cart</button>
+            </div>
+
+            <div id="cartContainer">
+                <h2>Cart</h2>
+                <ul id="cartList"></ul>
+                <h3>Total Price: <span id="totalPrice">₱0.00</span></h3>
+                <button onclick="clearCart()">Clear Cart</button>
+                <button onclick="cashOut()">Cash Out</button>
+        </div>
+
+
+<script>
+                function addToCart(itemName, itemPrice) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = itemName + " - ₱" + itemPrice;
+        
+                    var removeButton = document.createElement("button");
+                    removeButton.textContent = "Remove";
+                    removeButton.classList.add("removeButton");
+                    removeButton.onclick = function() {
+                        listItem.remove();
+                        updateTotalPrice(-itemPrice);
+                    };
+        
+                    listItem.appendChild(removeButton);
+                    document.getElementById("cartList").appendChild(listItem);
+                    updateTotalPrice(itemPrice);
+                }
+        
+                function clearCart() {
+                    document.getElementById("cartList").innerHTML = "";
+                    updateTotalPrice(0);
+                }
+        
+                function updateTotalPrice() {
+            var totalPriceElement = document.getElementById("totalPrice");
+            var total = 0;
+            var cartItems = document.getElementById("cartList").getElementsByTagName("li");
+        
+            for (var i = 0; i < cartItems.length; i++) {
+                var itemText = cartItems[i].textContent;
+                var itemPrice = parseFloat(itemText.split(" - ")[1].replace('₱', ''));
+                total += itemPrice;
+            }
+        
+            totalPriceElement.textContent = "₱" + total.toFixed(2);
+        
+            if (total === 0) {
+                totalPriceElement.style.display = "none";
+            } else {
+                totalPriceElement.style.display = "inline";
+            }
+        }
+        
+               function cashOut() {
+            var totalPriceElement = document.getElementById("totalPrice");
+            var totalPrice = totalPriceElement.textContent;
+            alert("Thank you for shopping! Your total is " + totalPrice);
+            clearCart();
+            totalPriceElement.style.display = "none"; // Hide the total price element
+        }
+</script>
+</body>
+</html>

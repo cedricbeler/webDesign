@@ -1,0 +1,220 @@
+<html>
+<style>
+    body {background-image: url("https://wallpapers.com/images/high/grayscale-hd-football-net-goal-vszoku8j88xof8ka.webp");
+    
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: #FFFFFF;
+
+}
+
+header {
+    background-color: darkgrey;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+ }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.price {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product1 {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+}
+#cartContainer {
+            margin-top: 20px;
+            background-color: darkgreen;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #cartList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cartList li {
+            margin-bottom: 10px;
+        }
+
+        #totalPrice {
+            font-weight: bold;
+        }
+
+        .removeButton {
+            background-color: red;
+        }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Accessories Store</title>
+</head>
+<body>
+    <div>
+        <header>
+            <center><a href ="C:\Users\Cedric Beler\Desktop\Ced_ITC_HTML\ITC_CODING\Beler_WebDesign.html"><input type = "Submit" value = "Home Page"></a></center>
+        </header>
+    </div>
+
+    <div class="product-container">
+        <div class="product">
+            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e626e02a-b3f6-4bed-a5a3-f262be97879b/phantom-gx-academy-football-shoes-QCKHdl.png" alt="Product 1">
+            <h3>Nike Phantom GX Academy</h3>
+            <p>Academy boots give you the precision touch you need to let your innermost playing instincts dazzle.</p>
+            <p class="price">₱4,695</p>
+            <button onclick="addToCart('Nike Phantom GX Academy', 4695)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f0819323-5e9b-4cc5-b44d-9b550c2baadd/vapor-15-academy-mercurial-dream-speed-mg-low-top-football-boot-4sDMVK.png" alt="Product 2">
+            <h3>Nike Vapor 15 Academy Mercurial Dream Speed</h3>
+            <p>Academy boot helps you take your game to the next level and put the pedal down in the waning minutes of a match—when it matters most.</p>
+            <p class="price">₱4,995</p>
+            <button onclick="addToCart('Nike Vapor 15 Academy Mercurial Dream Speed', 4995)">Add to Cart</button>
+        </div>
+
+        <div class ="product">
+            <img src ="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/89d2a222-5af8-4cf9-9266-4fe5f96fde96/tiempo-legend-10-elite-football-boot-PWQ83L.png" alt="Product 3">
+            <h3>Nike Tiempo Legend 10 Elite</h3>
+            <p>the Legend 10 is for any position on the pitch, whether you're sending a pinpoint pass through the defence or tracking back to stop a break-away.</p>
+            <p class="price">₱12,295</p>
+            <button onclick="addToCart('Nike Tiempo Legend 10 Elite', 12295)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <div class="product-container1">
+        <div class="product1">
+            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/21f538ed83d94dd894f40e96ae9c0efc_9366/Predator_Training_Gloves_Blue_IA0876_21_model.jpg" alt="Product 1">
+            <h3>Predator Training Gloves</h3>
+            <p>Target pinpoint punching and flawless ball handling in these Predator goalkeeper gloves from adidas.</p>
+            <p class="price">₱1,400</p>
+            <button onclick="addToCart('Predator Training Gloves', 1400)">Add to Cart</button>
+        </div>
+
+        <div class="product-container1">
+            <div class="product1">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/18b3d33ee8e6497587bfaf620125b38d_9366/UCL_Pro_Istanbul_Ball_White_HU1576_01_standard.jpg" alt="Product 2">
+                <h3>UCL Pro Istanbul Ball</h3>
+                <p>this adidas match ball flashes an eye-catching graphic that celebrates the city's unique location.</p>
+                <p class="price">$19.99</p>
+                <button onclick="addToCart('UCL Pro Istanbul Ball', 19.99)">Add to Cart</button>
+            </div>
+            <div id="cartContainer">
+                <h2>Cart</h2>
+                <ul id="cartList"></ul>
+                <h3>Total Price: <span id="totalPrice">₱0.00</span></h3>
+                <button onclick="clearCart()">Clear Cart</button>
+                <button onclick="cashOut()">Cash Out</button>
+            </div>
+        
+            <script>
+                function addToCart(itemName, itemPrice) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = itemName + " - ₱" + itemPrice;
+        
+                    var removeButton = document.createElement("button");
+                    removeButton.textContent = "Remove";
+                    removeButton.classList.add("removeButton");
+                    removeButton.onclick = function() {
+                        listItem.remove();
+                        updateTotalPrice(-itemPrice);
+                    };
+        
+                    listItem.appendChild(removeButton);
+                    document.getElementById("cartList").appendChild(listItem);
+                    updateTotalPrice(itemPrice);
+                }
+        
+                function clearCart() {
+                    document.getElementById("cartList").innerHTML = "";
+                    updateTotalPrice(0);
+                }
+        
+                function updateTotalPrice() {
+            var totalPriceElement = document.getElementById("totalPrice");
+            var total = 0;
+            var cartItems = document.getElementById("cartList").getElementsByTagName("li");
+        
+            for (var i = 0; i < cartItems.length; i++) {
+                var itemText = cartItems[i].textContent;
+                var itemPrice = parseFloat(itemText.split(" - ")[1].replace('₱', ''));
+                total += itemPrice;
+            }
+        
+            totalPriceElement.textContent = "₱" + total.toFixed(2);
+        
+            if (total === 0) {
+                totalPriceElement.style.display = "none";
+            } else {
+                totalPriceElement.style.display = "inline";
+            }
+        }
+        
+               function cashOut() {
+            var totalPriceElement = document.getElementById("totalPrice");
+            var totalPrice = totalPriceElement.textContent;
+            alert("Thank you for shopping! Your total is " + totalPrice);
+            clearCart();
+            totalPriceElement.style.display = "none"; // Hide the total price element
+        }
+            </script>
+</body>
+</html>

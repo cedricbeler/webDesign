@@ -1,0 +1,220 @@
+<html>
+<style>
+    body {background-image: url("https://t3.ftcdn.net/jpg/06/17/95/22/360_F_617952219_WOtyiUtMrC9hM8i3Fw8ht3yRwpwlsty3.webp");
+    
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: #FFFFFF;
+
+}
+header {
+    background-color: darkgray;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+ }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border: 1px solid #FFFFFF; /* Add a border for image clarity */
+    border-radius: 5px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.price {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product1 {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+}
+#cartContainer {
+            margin-top: 20px;
+            background-color: darkgreen;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #cartList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cartList li {
+            margin-bottom: 10px;
+        }
+
+        #totalPrice {
+            font-weight: bold;
+        }
+
+        .removeButton {
+            background-color: red;
+        }
+
+</style>
+
+<html>
+<head>
+    <title>Volleyball Store</title>
+</head>
+<body>
+    <div>
+        <header>
+            <center><a href ="C:\Users\Cedric Beler\Desktop\Ced_ITC_HTML\ITC_CODING\Beler_WebDesign.html"><input type = "Submit" value = "Home Page"></a></center>
+        </header>
+    </div>
+
+    <div class="product-container">
+        <div class="product">
+            <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/%7Bwidth%7D,%7Bheight%7D,quality=75,format=auto/in-resources/642d9607-fde5-4aac-b350-791b119ee0dc/Images/ProductImages/Source/1051A074_403_SR_RT_GLB_PNG_600x600-JPG.jpg  " alt="Product 1">
+            <h3>Netburner Ballistic FF MT 3</h3>
+            <p>Netburner court shoe's supportive fit keeps you focused on your game. It is also designed to help you make quicker starts..</p>
+            <p class="price">₱8,690</p>
+            <button onclick="addToCart('Netburner Ballistic FF MT 3', 8690)">Add to Cart</button>
+        </div>
+
+        <div class ="product">
+            <img src ="https://images.allvolleyball.com/images/large/430314_0900_06.jpg" alt="Product 3">
+            <h3>Mizuno Women's Wave Dimension</h3>
+            <p>Mizuno women's Wave Dimension volleyball shoe is designed for both stability and comfort.</p>
+            <p class="price">₱6,000</p>
+            <button onclick="addToCart('Mizuno Womens Wave Dimension', 6000)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.allvolleyball.com/images/large/1071A091_101_main_01.jpg" alt="Product 2">
+            <h3>ASICS Men's Gel-Rocket 11</h3>
+            <p>The perfect multi-purpose indoor court shoe for athletes of all levels. With its superior cushioning, flexible construction, and advanced support features, this shoe is designed to help players move more freely and confidently on the court.</p>
+            <p class="price">₱3,563</p>
+            <button onclick="addToCart('ASICS Mens Gel-Rocket 11', 3563)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <div class="product-container1">
+        <div class="product1">
+            <img src="https://olympicvillageunited.com/cdn/shop/files/1_2a69fcea-f998-4e8a-b3a6-35782e41d79f_864x864.jpg?v=1696816312   " alt="Product 2">
+            <h3>Eva Fiam Laminated Volleyball</h3>
+            <p>Mikasa is the most used ball in World Volleyball League.</p>
+            <p class="price">₱4,995</p>
+            <button onclick="addToCart('Eva Fiam Laminated Volleyball', 4995)">Add to Cart</button>
+        </div>
+
+        <div class="product-container1">
+            <div class="product1">
+                <img src="https://images.allvolleyball.com/images/uploads/large/volleyball_Knee_Pad_Mizuno_LR6_Knee_Pads_detail.jpg" alt="Product 2">
+                <h3>Mizuno LR6 Knee Pads</h3>
+                <p>With a minimalist, low-rise, no fold, design, the Mizuno LR6 volleyball knee pads give you just the right amount of coverage while supplying you with greater freedom of movement.</p>
+                <p class="price">₱3,000</p>
+                <button onclick="addToCart('Mizuno LR6 Knee Pads', 3000)">Add to Cart</button>
+            </div>
+            <div id="cartContainer">
+                <h2>Cart</h2>
+                <ul id="cartList"></ul>
+                <h3>Total Price: <span id="totalPrice">₱0.00</span></h3>
+                <button onclick="clearCart()">Clear Cart</button>
+                <button onclick="cashOut()">Cash Out</button>
+        </div>
+
+<script>
+                function addToCart(itemName, itemPrice) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = itemName + " - ₱" + itemPrice;
+        
+                    var removeButton = document.createElement("button");
+                    removeButton.textContent = "Remove";
+                    removeButton.classList.add("removeButton");
+                    removeButton.onclick = function() {
+                        listItem.remove();
+                        updateTotalPrice(-itemPrice);
+                    };
+        
+                    listItem.appendChild(removeButton);
+                    document.getElementById("cartList").appendChild(listItem);
+                    updateTotalPrice(itemPrice);
+                }
+        
+                function clearCart() {
+                    document.getElementById("cartList").innerHTML = "";
+                    updateTotalPrice(0);
+                }
+        
+                function updateTotalPrice() {
+            var totalPriceElement = document.getElementById("totalPrice");
+            var total = 0;
+            var cartItems = document.getElementById("cartList").getElementsByTagName("li");
+        
+            for (var i = 0; i < cartItems.length; i++) {
+                var itemText = cartItems[i].textContent;
+                var itemPrice = parseFloat(itemText.split(" - ")[1].replace('₱', ''));
+                total += itemPrice;
+            }
+        
+            totalPriceElement.textContent = "₱" + total.toFixed(2);
+        
+            if (total === 0) {
+                totalPriceElement.style.display = "none";
+            } else {
+                totalPriceElement.style.display = "inline";
+            }
+        }
+        
+               function cashOut() {
+            var totalPriceElement = document.getElementById("totalPrice");
+            var totalPrice = totalPriceElement.textContent;
+            alert("Thank you for shopping! Your total is " + totalPrice);
+            clearCart();
+            totalPriceElement.style.display = "none"; // Hide the total price element
+        }
+</script>
+</body>
+</html>

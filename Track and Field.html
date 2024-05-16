@@ -1,0 +1,217 @@
+<html>
+<style>
+    body {background-image: url("https://static.vecteezy.com/system/resources/previews/012/651/845/non_2x/athletic-track-view-free-photo.jpg");
+    
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: #FFFFFF;
+}
+header {
+    background-color: darkgrey;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+ }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.product {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+}
+img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+h3 {
+    margin-top: 10px;
+}
+.price {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.product1 {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+}
+#cartContainer {
+            margin-top: 20px;
+            background-color: darkgreen;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #cartList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cartList li {
+            margin-bottom: 10px;
+        }
+
+        #totalPrice {
+            font-weight: bold;
+        }
+
+        .removeButton {
+            background-color: red;
+        }
+</style>
+<html>
+<head>
+    <title>Track and Field Store</title>
+</head>
+<body>
+    <div>
+        <header>
+            <center><a href ="C:\Users\Cedric Beler\Desktop\Ced_ITC_HTML\ITC_CODING\Beler_WebDesign.html"><input type = "Submit" value = "Home Page"></a></center>
+        </header>
+    </div>
+
+    <div class="product-container">
+        <div class="product">
+            <img src="https://prosportsequip.com/cdn/shop/products/fisher-athletic-square-aluminum-open-back-adjustable-track-hurdle-hs1450sa-28123507589229_large.png?v=1621880230" alt="Product 1">
+            <h3>Fisher Athletic Square Aluminum Open Back Adjustable Track Hurdle HS1450SA</h3>
+            <p>Hurdle height adjusts from 30" to 42".
+                Aluminum square tube construction.
+                Push-button adjustment every 3".
+                Uprights are available in 12 colors.
+                Free screening on orders of 24 hurdles or more.
+                Meets National Federation regulations.</p>
+            <p class="price">₱8,690</p>
+            <button onclick="addToCart('Fisher Athletic Square Aluminum Open Back Adjustable Track Hurdle HS1450SA', 8690)">Add to Cart</button>
+        </div>
+
+        <div class ="product">
+            <img src ="https://prosportsequip.com/cdn/shop/products/gill-s2-track-starting-block-412c-29213165977709_1024x1024.jpg?v=1655228218" alt="Product 3">
+            <h3>Gill S2 Track Starting Block 412C</h3>
+            <p>Designed to give teams the lead before the race even starts, the Gill S2 Starting Block's extra tall 8" pedals give the sprinter the advantage at the line. Gill's 3 colored pad options allow the school to increase their pride and presence on the track.</p>
+            <p class="price">₱10,470</p>
+            <button onclick="addToCart('Gill S2 Track Starting Block 412C', 10470)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://prosportsequip.com/cdn/shop/products/gill-foam-training-track-hurdle-409-29195959861357_1024x1024.jpg?v=1654805864" alt="Product 2">
+            <h3>Gill Foam Training Track Hurdle 409</h3>
+            <p>Ideal training hurdle made of forgiving foam
+                Heavy enough to remain upright yet light enough to be completely portable 
+                Durable vinyl covering allows for indoor and outdoor use 
+                Heights of 30", 33", 36", and 39"</p>
+            <p class="price">₱3,563</p>
+            <button onclick="addToCart('Gill Foam Training Track Hurdle 409', 3563)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <div class="product-container1">
+        <div class="product1">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2bd3d7fc-13a8-467f-8f09-5fab3a8750ec/rival-sprint-athletics-sprinting-spikes-QNwNt9.png" alt="Product 2">
+            <h3>Nike Rival Sprint</h3>
+            <p>Race out of the starting blocks and finish with a flurry in a spike designed with speed in mind. Its robust, reinforced yet lightweight upper provides the key containment necessary to attack the turns and straightaways around the oval. Feel the power and drive of the forefoot plate as you get up on your toes and hightail it towards the tape.</p>
+            <p class="price">₱2,219</p>
+            <button onclick="addToCart('Nike Rival Sprint', 2219)">Add to Cart</button>
+        </div>
+
+        <div class="product-container1">
+            <div class="product1">
+                <img src="https://dks.scene7.com/is/image/GolfGalaxy/16GILGLTNTRNNGJVLTAF?qlt=70&wid=1100&fmt=webp" alt="Product 2">
+                <h3>Gill 40 m/600 g Pacer Training Javelin</h3>
+                <p>A throwing event in which athletes throw a metal-tipped javelin as far as possible. It requires a combination of strength, power, timing, co-ordination precision and timing. The athlete must hold the javelin by its corded grip with his or her little finger closest to the tip of the implement.</p>
+                <p class="price">₱7,662</p>
+                <button onclick="addToCart('Gill 40 m/600 g Pacer Training Javelin', 7662)">Add to Cart</button>
+            </div>
+            
+            <div id="cartContainer">
+                <h2>Cart</h2>
+                <ul id="cartList"></ul>
+                <h3>Total Price: <span id="totalPrice">₱0.00</span></h3>
+                <button onclick="clearCart()">Clear Cart</button>
+                <button onclick="cashOut()">Cash Out</button>
+        </div>
+
+<script>
+                function addToCart(itemName, itemPrice) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = itemName + " - ₱" + itemPrice;
+        
+                    var removeButton = document.createElement("button");
+                    removeButton.textContent = "Remove";
+                    removeButton.classList.add("removeButton");
+                    removeButton.onclick = function() {
+                        listItem.remove();
+                        updateTotalPrice(-itemPrice);
+                    };
+        
+                    listItem.appendChild(removeButton);
+                    document.getElementById("cartList").appendChild(listItem);
+                    updateTotalPrice(itemPrice);
+                }
+        
+                function clearCart() {
+                    document.getElementById("cartList").innerHTML = "";
+                    updateTotalPrice(0);
+                }
+        
+                function updateTotalPrice() {
+            var totalPriceElement = document.getElementById("totalPrice");
+            var total = 0;
+            var cartItems = document.getElementById("cartList").getElementsByTagName("li");
+        
+            for (var i = 0; i < cartItems.length; i++) {
+                var itemText = cartItems[i].textContent;
+                var itemPrice = parseFloat(itemText.split(" - ")[1].replace('₱', ''));
+                total += itemPrice;
+            }
+        
+            totalPriceElement.textContent = "₱" + total.toFixed(2);
+        
+            if (total === 0) {
+                totalPriceElement.style.display = "none";
+            } else {
+                totalPriceElement.style.display = "inline";
+            }
+        }
+        
+               function cashOut() {
+            var totalPriceElement = document.getElementById("totalPrice");
+            var totalPrice = totalPriceElement.textContent;
+            alert("Thank you for shopping! Your total is " + totalPrice);
+            clearCart();
+            totalPriceElement.style.display = "none"; // Hide the total price element
+        }
+</script>
+</body>
+</html>
